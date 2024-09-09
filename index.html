@@ -297,6 +297,26 @@
 		 transform: translate3d(0, -10%, 1px);
 	}
 }
+	    summary {
+    outline: transparent;
+    height: 100%;
+    width: 100%;
+    min-height: 40px; /* Make touch target bigger */
+    min-width: 40px;  /* Adjust as per needs */
+}
+
+details {
+    cursor: pointer;
+    outline: transparent;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.drawer__structure {
+    transform: translate3d(0, 0, calc((var(--open, var(--default)) * var(--depth)) * 1vmin));
+    transition: transform var(--transition);
+}
     </style>
 </head>
 <body>
